@@ -1,0 +1,1043 @@
+2026-02-15T16:11:03.627Z  INFO 42696 --- [managerback] [main] c.f.managerback.ManagerbackApplication   : Starting ManagerbackApplication using Java 21.0.2 with PID 42696 (C:\_IT\PROJECTS\Football Manager\managerback-master\build\classes\java\main started by uvema in C:\_IT\PROJECTS\Football Manager\managerback-master)
+2026-02-15T16:11:03.628Z  INFO 42696 --- [managerback] [main] c.f.managerback.ManagerbackApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-02-15T16:11:04.319Z  INFO 42696 --- [managerback] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-15T16:11:04.424Z  INFO 42696 --- [managerback] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89 ms. Found 12 JPA repository interfaces.
+2026-02-15T16:11:05.058Z  INFO 42696 --- [managerback] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-02-15T16:11:05.074Z  INFO 42696 --- [managerback] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-15T16:11:05.074Z  INFO 42696 --- [managerback] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-02-15T16:11:05.144Z  INFO 42696 --- [managerback] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-15T16:11:05.145Z  INFO 42696 --- [managerback] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1480 ms
+2026-02-15T16:11:05.191Z  INFO 42696 --- [managerback] [main] o.s.boot.web.servlet.RegistrationBean    : Filter jwtFilterRegistration was not registered (disabled)
+2026-02-15T16:11:05.361Z  INFO 42696 --- [managerback] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-15T16:11:05.656Z  INFO 42696 --- [managerback] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7f8a9454
+2026-02-15T16:11:05.658Z  INFO 42696 --- [managerback] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-15T16:11:05.704Z  INFO 42696 --- [managerback] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-15T16:11:05.776Z  INFO 42696 --- [managerback] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-02-15T16:11:05.816Z  INFO 42696 --- [managerback] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-15T16:11:06.097Z  INFO 42696 --- [managerback] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-15T16:11:06.154Z  WARN 42696 --- [managerback] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-15T16:11:07.061Z  INFO 42696 --- [managerback] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-15T16:11:07.063Z  INFO 42696 --- [managerback] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-15T16:11:07.297Z  INFO 42696 --- [managerback] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-15T16:11:08.610Z  WARN 42696 --- [managerback] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-15T16:11:08.638Z TRACE 42696 --- [managerback] [main] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfig=com.football.managerback.infrastructure.security.SecurityConfig$$SpringCGLIB$$0@16a5c7e4}
+2026-02-15T16:11:08.649Z  WARN 42696 --- [managerback] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1f565d92-8be1-4f5c-ab96-abd7baeba175
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-02-15T16:11:09.094Z  INFO 42696 --- [managerback] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@745526a0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a5d8ae4, org.springframework.security.web.context.SecurityContextHolderFilter@7f74ae13, org.springframework.security.web.header.HeaderWriterFilter@b9271b6, org.springframework.web.filter.CorsFilter@5c1a728, org.springframework.security.web.authentication.logout.LogoutFilter@30d72c00, com.football.managerback.infrastructure.security.JwtAuthenticationFilter@1e3ff233, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2417413c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c7673b8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34b846a1, org.springframework.security.web.session.SessionManagementFilter@1172d47, org.springframework.security.web.access.ExceptionTranslationFilter@1a19fbfb, org.springframework.security.web.access.intercept.AuthorizationFilter@3890c4da]
+2026-02-15T16:11:09.679Z  INFO 42696 --- [managerback] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2026-02-15T16:11:09.690Z  INFO 42696 --- [managerback] [main] c.f.managerback.ManagerbackApplication   : Started ManagerbackApplication in 6.405 seconds (process running for 6.679)
+2026-02-15T16:11:27.002Z  INFO 42696 --- [managerback] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-15T16:11:27.003Z  INFO 42696 --- [managerback] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-15T16:11:27.005Z  INFO 42696 --- [managerback] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-02-15T16:11:27.054Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain [RequestMatcher=any request, Filters=[org.springframework.security.web.session.DisableEncodeUrlFilter@745526a0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a5d8ae4, org.springframework.security.web.context.SecurityContextHolderFilter@7f74ae13, org.springframework.security.web.header.HeaderWriterFilter@b9271b6, org.springframework.web.filter.CorsFilter@5c1a728, org.springframework.security.web.authentication.logout.LogoutFilter@30d72c00, com.football.managerback.infrastructure.security.JwtAuthenticationFilter@1e3ff233, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2417413c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c7673b8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34b846a1, org.springframework.security.web.session.SessionManagementFilter@1172d47, org.springframework.security.web.access.ExceptionTranslationFilter@1a19fbfb, org.springframework.security.web.access.intercept.AuthorizationFilter@3890c4da]] (1/1)
+2026-02-15T16:11:27.055Z DEBUG 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /login
+2026-02-15T16:11:27.057Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/13)
+2026-02-15T16:11:27.059Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/13)
+2026-02-15T16:11:27.066Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/13)
+2026-02-15T16:11:27.069Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/13)
+2026-02-15T16:11:27.074Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking CorsFilter (5/13)
+2026-02-15T16:11:27.076Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (6/13)
+2026-02-15T16:11:27.076Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Or [Ant [pattern='/logout', GET], Ant [pattern='/logout', POST], Ant [pattern='/logout', PUT], Ant [pattern='/logout', DELETE]]
+2026-02-15T16:11:27.076Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (7/13)
+2026-02-15T16:11:27.076Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (8/13)
+2026-02-15T16:11:27.077Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (9/13)
+2026-02-15T16:11:27.078Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (10/13)
+2026-02-15T16:11:27.078Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (11/13)
+2026-02-15T16:11:27.078Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-02-15T16:11:27.079Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+2026-02-15T16:11:27.080Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (12/13)
+2026-02-15T16:11:27.080Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (13/13)
+2026-02-15T16:11:27.082Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] estMatcherDelegatingAuthorizationManager : Authorizing SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@434c651c]
+2026-02-15T16:11:27.084Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] estMatcherDelegatingAuthorizationManager : Checking authorization on SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@434c651c] using org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$$Lambda/0x00000274ca9ab4b0@5b776404
+2026-02-15T16:11:27.086Z DEBUG 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /login
+2026-02-15T16:11:27.354Z  WARN 42696 --- [managerback] [http-nio-8082-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
+2026-02-15T16:11:27.355Z ERROR 42696 --- [managerback] [http-nio-8082-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "manager.user" does not exist
+  Position: 85
+2026-02-15T16:11:27.365Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
+2026-02-15T16:11:27.366Z ERROR 42696 --- [managerback] [http-nio-8082-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [select u1_0.id,u1_0.email,u1_0.password,u1_0.role_id,u1_0.status,u1_0.username from manager."user" u1_0 where u1_0.username=? and u1_0.status=?] [ERROR: relation "manager.user" does not exist
+  Position: 85] [n/a]; SQL [n/a]] with root cause
+
+org.postgresql.util.PSQLException: ERROR: relation "manager.user" does not exist
+  Position: 85
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134) ~[postgresql-42.6.2.jar:42.6.2]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:246) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:167) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:218) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:98) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:66) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:202) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:209) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$2(ConcreteSqmSelectQueryPlan.java:137) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:362) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:303) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:509) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:427) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResult(AbstractSelectionQuery.java:564) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:223) ~[spring-data-jpa-3.2.4.jar:3.2.4]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92) ~[spring-data-jpa-3.2.4.jar:3.2.4]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:149) ~[spring-data-jpa-3.2.4.jar:3.2.4]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:137) ~[spring-data-jpa-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.5.jar:6.1.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392) ~[spring-tx-6.1.5.jar:6.1.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135) ~[spring-data-jpa-3.2.4.jar:3.2.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:220) ~[spring-aop-6.1.5.jar:6.1.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy154.findUserByUsername(Unknown Source) ~[na:na]
+	at com.football.managerback.manager.user.login.LoginService.login(LoginService.java:28) ~[main/:na]
+	at com.football.managerback.manager.user.login.LoginController.login(LoginController.java:32) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at com.football.managerback.infrastructure.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:47) ~[main/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-02-15T16:11:27.397Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain [RequestMatcher=any request, Filters=[org.springframework.security.web.session.DisableEncodeUrlFilter@745526a0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a5d8ae4, org.springframework.security.web.context.SecurityContextHolderFilter@7f74ae13, org.springframework.security.web.header.HeaderWriterFilter@b9271b6, org.springframework.web.filter.CorsFilter@5c1a728, org.springframework.security.web.authentication.logout.LogoutFilter@30d72c00, com.football.managerback.infrastructure.security.JwtAuthenticationFilter@1e3ff233, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2417413c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c7673b8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34b846a1, org.springframework.security.web.session.SessionManagementFilter@1172d47, org.springframework.security.web.access.ExceptionTranslationFilter@1a19fbfb, org.springframework.security.web.access.intercept.AuthorizationFilter@3890c4da]] (1/1)
+2026-02-15T16:11:27.398Z DEBUG 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /error
+2026-02-15T16:11:27.398Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/13)
+2026-02-15T16:11:27.398Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/13)
+2026-02-15T16:11:27.398Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/13)
+2026-02-15T16:11:27.398Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/13)
+2026-02-15T16:11:27.398Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking CorsFilter (5/13)
+2026-02-15T16:11:27.398Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (6/13)
+2026-02-15T16:11:27.398Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Or [Ant [pattern='/logout', GET], Ant [pattern='/logout', POST], Ant [pattern='/logout', PUT], Ant [pattern='/logout', DELETE]]
+2026-02-15T16:11:27.399Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (7/13)
+2026-02-15T16:11:27.399Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (8/13)
+2026-02-15T16:11:27.399Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (9/13)
+2026-02-15T16:11:27.399Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (10/13)
+2026-02-15T16:11:27.399Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (11/13)
+2026-02-15T16:11:27.399Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (12/13)
+2026-02-15T16:11:27.399Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (13/13)
+2026-02-15T16:11:27.400Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] estMatcherDelegatingAuthorizationManager : Authorizing SecurityContextHolderAwareRequestWrapper[ FirewalledRequest[ org.apache.catalina.core.ApplicationHttpRequest@7b909ffd]]
+2026-02-15T16:11:27.400Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] estMatcherDelegatingAuthorizationManager : Checking authorization on SecurityContextHolderAwareRequestWrapper[ FirewalledRequest[ org.apache.catalina.core.ApplicationHttpRequest@7b909ffd]] using org.springframework.security.authorization.AuthenticatedAuthorizationManager@5a235313
+2026-02-15T16:11:27.401Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-02-15T16:11:27.401Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+2026-02-15T16:11:27.402Z TRACE 42696 --- [managerback] [http-nio-8082-exec-1] o.s.s.w.a.ExceptionTranslationFilter     : Sending AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]] to authentication entry point since access is denied
+
+org.springframework.security.access.AccessDeniedException: Access Denied
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:98) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:91) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:642) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:410) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:277) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:362) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:222) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:308) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-02-15T16:11:27.405Z DEBUG 42696 --- [managerback] [http-nio-8082-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-02-15T17:30:26.375Z  INFO 57304 --- [managerback] [main] c.f.managerback.ManagerbackApplication   : Starting ManagerbackApplication using Java 21.0.2 with PID 57304 (C:\_IT\PROJECTS\Football Manager\managerback-master\build\classes\java\main started by uvema in C:\_IT\PROJECTS\Football Manager\managerback-master)
+2026-02-15T17:30:26.376Z  INFO 57304 --- [managerback] [main] c.f.managerback.ManagerbackApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-02-15T17:30:27.152Z  INFO 57304 --- [managerback] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-15T17:30:27.337Z  INFO 57304 --- [managerback] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 177 ms. Found 12 JPA repository interfaces.
+2026-02-15T17:30:28.863Z  INFO 57304 --- [managerback] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-02-15T17:30:28.876Z  INFO 57304 --- [managerback] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-15T17:30:28.877Z  INFO 57304 --- [managerback] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-02-15T17:30:28.930Z  INFO 57304 --- [managerback] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-15T17:30:28.930Z  INFO 57304 --- [managerback] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2517 ms
+2026-02-15T17:30:28.966Z  INFO 57304 --- [managerback] [main] o.s.boot.web.servlet.RegistrationBean    : Filter jwtFilterRegistration was not registered (disabled)
+2026-02-15T17:30:29.009Z  WARN 57304 --- [managerback] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2026-02-15T17:30:29.013Z  INFO 57304 --- [managerback] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-02-15T17:30:29.035Z  INFO 57304 --- [managerback] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-02-15T17:30:29.069Z ERROR 57304 --- [managerback] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2026-02-15T17:32:34.587Z  INFO 60524 --- [managerback] [main] c.f.managerback.ManagerbackApplication   : Starting ManagerbackApplication using Java 21.0.2 with PID 60524 (C:\_IT\PROJECTS\Football Manager\managerback-master\build\classes\java\main started by uvema in C:\_IT\PROJECTS\Football Manager\managerback-master)
+2026-02-15T17:32:34.589Z  INFO 60524 --- [managerback] [main] c.f.managerback.ManagerbackApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-02-15T17:32:35.793Z  INFO 60524 --- [managerback] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-15T17:32:35.876Z  INFO 60524 --- [managerback] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 12 JPA repository interfaces.
+2026-02-15T17:32:36.731Z  INFO 60524 --- [managerback] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-02-15T17:32:36.746Z  INFO 60524 --- [managerback] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-15T17:32:36.747Z  INFO 60524 --- [managerback] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-02-15T17:32:36.811Z  INFO 60524 --- [managerback] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-15T17:32:36.811Z  INFO 60524 --- [managerback] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2169 ms
+2026-02-15T17:32:36.854Z  INFO 60524 --- [managerback] [main] o.s.boot.web.servlet.RegistrationBean    : Filter jwtFilterRegistration was not registered (disabled)
+2026-02-15T17:32:36.993Z  WARN 60524 --- [managerback] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2026-02-15T17:32:37.000Z  INFO 60524 --- [managerback] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-02-15T17:32:37.024Z  INFO 60524 --- [managerback] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-02-15T17:32:37.055Z ERROR 60524 --- [managerback] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2026-02-15T17:51:04.890Z  INFO 35020 --- [managerback] [main] c.f.managerback.ManagerbackApplication   : Starting ManagerbackApplication using Java 21.0.2 with PID 35020 (C:\_IT\PROJECTS\Football Manager\managerback-master\build\classes\java\main started by uvema in C:\_IT\PROJECTS\Football Manager\managerback-master)
+2026-02-15T17:51:04.891Z  INFO 35020 --- [managerback] [main] c.f.managerback.ManagerbackApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-02-15T17:51:05.618Z  INFO 35020 --- [managerback] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-15T17:51:05.696Z  INFO 35020 --- [managerback] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 12 JPA repository interfaces.
+2026-02-15T17:51:06.253Z  INFO 35020 --- [managerback] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-02-15T17:51:06.264Z  INFO 35020 --- [managerback] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-15T17:51:06.264Z  INFO 35020 --- [managerback] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-02-15T17:51:06.311Z  INFO 35020 --- [managerback] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-15T17:51:06.311Z  INFO 35020 --- [managerback] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1384 ms
+2026-02-15T17:51:06.380Z  INFO 35020 --- [managerback] [main] o.s.boot.web.servlet.RegistrationBean    : Filter jwtFilterRegistration was not registered (disabled)
+2026-02-15T17:51:06.451Z  WARN 35020 --- [managerback] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2026-02-15T17:51:06.457Z  INFO 35020 --- [managerback] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-02-15T17:51:06.481Z  INFO 35020 --- [managerback] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-02-15T17:51:06.512Z ERROR 35020 --- [managerback] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2026-02-15T17:52:42.704Z  INFO 13504 --- [managerback] [main] c.f.managerback.ManagerbackApplication   : Starting ManagerbackApplication using Java 21.0.2 with PID 13504 (C:\_IT\PROJECTS\Football Manager\managerback-master\build\classes\java\main started by uvema in C:\_IT\PROJECTS\Football Manager\managerback-master)
+2026-02-15T17:52:42.706Z  INFO 13504 --- [managerback] [main] c.f.managerback.ManagerbackApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-02-15T17:52:43.405Z  INFO 13504 --- [managerback] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-15T17:52:43.497Z  INFO 13504 --- [managerback] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 12 JPA repository interfaces.
+2026-02-15T17:52:44.109Z  INFO 13504 --- [managerback] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-02-15T17:52:44.121Z  INFO 13504 --- [managerback] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-15T17:52:44.121Z  INFO 13504 --- [managerback] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-02-15T17:52:44.180Z  INFO 13504 --- [managerback] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-15T17:52:44.180Z  INFO 13504 --- [managerback] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1434 ms
+2026-02-15T17:52:44.225Z  INFO 13504 --- [managerback] [main] o.s.boot.web.servlet.RegistrationBean    : Filter jwtFilterRegistration was not registered (disabled)
+2026-02-15T17:52:44.391Z  INFO 13504 --- [managerback] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-15T17:52:44.695Z  INFO 13504 --- [managerback] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4a642e4b
+2026-02-15T17:52:44.698Z  INFO 13504 --- [managerback] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-15T17:52:44.749Z  INFO 13504 --- [managerback] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-15T17:52:44.810Z  INFO 13504 --- [managerback] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-02-15T17:52:44.838Z  INFO 13504 --- [managerback] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-15T17:52:45.065Z  INFO 13504 --- [managerback] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-15T17:52:45.115Z  WARN 13504 --- [managerback] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-15T17:52:45.908Z  INFO 13504 --- [managerback] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-15T17:52:45.912Z  INFO 13504 --- [managerback] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-15T17:52:46.254Z  INFO 13504 --- [managerback] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-15T17:52:47.367Z  WARN 13504 --- [managerback] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-15T17:52:47.386Z TRACE 13504 --- [managerback] [main] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {securityConfig=com.football.managerback.infrastructure.security.SecurityConfig$$SpringCGLIB$$0@4be0a27d}
+2026-02-15T17:52:47.394Z  WARN 13504 --- [managerback] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 31dd91e0-a1de-485e-b857-f77096d5129a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-02-15T17:52:48.057Z  INFO 13504 --- [managerback] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@690506b0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f29bbde, org.springframework.security.web.context.SecurityContextHolderFilter@6a85a13, org.springframework.security.web.header.HeaderWriterFilter@559048b3, org.springframework.web.filter.CorsFilter@47d9bdf4, org.springframework.security.web.authentication.logout.LogoutFilter@7d1647d5, com.football.managerback.infrastructure.security.JwtAuthenticationFilter@14168e1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@511d31a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e99738e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31a266e0, org.springframework.security.web.session.SessionManagementFilter@4731c9af, org.springframework.security.web.access.ExceptionTranslationFilter@5c608988, org.springframework.security.web.access.intercept.AuthorizationFilter@4a5d8ae4]
+2026-02-15T17:52:48.494Z  INFO 13504 --- [managerback] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path ''
+2026-02-15T17:52:48.503Z  INFO 13504 --- [managerback] [main] c.f.managerback.ManagerbackApplication   : Started ManagerbackApplication in 6.147 seconds (process running for 6.416)
+2026-02-15T17:53:09.587Z  INFO 13504 --- [managerback] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-15T17:53:09.587Z  INFO 13504 --- [managerback] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-15T17:53:09.588Z  INFO 13504 --- [managerback] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-02-15T17:53:09.600Z TRACE 13504 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain [RequestMatcher=any request, Filters=[org.springframework.security.web.session.DisableEncodeUrlFilter@690506b0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f29bbde, org.springframework.security.web.context.SecurityContextHolderFilter@6a85a13, org.springframework.security.web.header.HeaderWriterFilter@559048b3, org.springframework.web.filter.CorsFilter@47d9bdf4, org.springframework.security.web.authentication.logout.LogoutFilter@7d1647d5, com.football.managerback.infrastructure.security.JwtAuthenticationFilter@14168e1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@511d31a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e99738e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31a266e0, org.springframework.security.web.session.SessionManagementFilter@4731c9af, org.springframework.security.web.access.ExceptionTranslationFilter@5c608988, org.springframework.security.web.access.intercept.AuthorizationFilter@4a5d8ae4]] (1/1)
+2026-02-15T17:53:09.601Z DEBUG 13504 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui.html
+2026-02-15T17:53:09.601Z TRACE 13504 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/13)
+2026-02-15T17:53:09.601Z TRACE 13504 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/13)
+2026-02-15T17:53:09.603Z TRACE 13504 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/13)
+2026-02-15T17:53:09.604Z TRACE 13504 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/13)
+2026-02-15T17:53:09.604Z TRACE 13504 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking CorsFilter (5/13)
+2026-02-15T17:53:09.605Z TRACE 13504 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (6/13)
+2026-02-15T17:53:09.605Z TRACE 13504 --- [managerback] [http-nio-8082-exec-1] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Or [Ant [pattern='/logout', GET], Ant [pattern='/logout', POST], Ant [pattern='/logout', PUT], Ant [pattern='/logout', DELETE]]
+2026-02-15T17:53:09.605Z TRACE 13504 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (7/13)
+2026-02-15T17:53:09.606Z TRACE 13504 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (8/13)
+2026-02-15T17:53:09.606Z TRACE 13504 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (9/13)
+2026-02-15T17:53:09.606Z TRACE 13504 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (10/13)
+2026-02-15T17:53:09.608Z TRACE 13504 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (11/13)
+2026-02-15T17:53:09.608Z TRACE 13504 --- [managerback] [http-nio-8082-exec-1] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-02-15T17:53:09.609Z TRACE 13504 --- [managerback] [http-nio-8082-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+2026-02-15T17:53:09.609Z TRACE 13504 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (12/13)
+2026-02-15T17:53:09.609Z TRACE 13504 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (13/13)
+2026-02-15T17:53:09.609Z TRACE 13504 --- [managerback] [http-nio-8082-exec-1] estMatcherDelegatingAuthorizationManager : Authorizing SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@3879114d]
+2026-02-15T17:53:09.609Z TRACE 13504 --- [managerback] [http-nio-8082-exec-1] estMatcherDelegatingAuthorizationManager : Checking authorization on SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@3879114d] using org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$$Lambda/0x000001fddf9b2048@502c92ac
+2026-02-15T17:53:09.610Z DEBUG 13504 --- [managerback] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui.html
+2026-02-15T17:53:09.645Z TRACE 13504 --- [managerback] [http-nio-8082-exec-1] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
+2026-02-15T17:53:11.444Z TRACE 13504 --- [managerback] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain [RequestMatcher=any request, Filters=[org.springframework.security.web.session.DisableEncodeUrlFilter@690506b0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f29bbde, org.springframework.security.web.context.SecurityContextHolderFilter@6a85a13, org.springframework.security.web.header.HeaderWriterFilter@559048b3, org.springframework.web.filter.CorsFilter@47d9bdf4, org.springframework.security.web.authentication.logout.LogoutFilter@7d1647d5, com.football.managerback.infrastructure.security.JwtAuthenticationFilter@14168e1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@511d31a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e99738e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31a266e0, org.springframework.security.web.session.SessionManagementFilter@4731c9af, org.springframework.security.web.access.ExceptionTranslationFilter@5c608988, org.springframework.security.web.access.intercept.AuthorizationFilter@4a5d8ae4]] (1/1)
+2026-02-15T17:53:11.444Z DEBUG 13504 --- [managerback] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /users
+2026-02-15T17:53:11.444Z TRACE 13504 --- [managerback] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/13)
+2026-02-15T17:53:11.444Z TRACE 13504 --- [managerback] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/13)
+2026-02-15T17:53:11.444Z TRACE 13504 --- [managerback] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/13)
+2026-02-15T17:53:11.444Z TRACE 13504 --- [managerback] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/13)
+2026-02-15T17:53:11.444Z TRACE 13504 --- [managerback] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Invoking CorsFilter (5/13)
+2026-02-15T17:53:11.444Z TRACE 13504 --- [managerback] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (6/13)
+2026-02-15T17:53:11.444Z TRACE 13504 --- [managerback] [http-nio-8082-exec-2] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Or [Ant [pattern='/logout', GET], Ant [pattern='/logout', POST], Ant [pattern='/logout', PUT], Ant [pattern='/logout', DELETE]]
+2026-02-15T17:53:11.444Z TRACE 13504 --- [managerback] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (7/13)
+2026-02-15T17:53:11.444Z TRACE 13504 --- [managerback] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (8/13)
+2026-02-15T17:53:11.444Z TRACE 13504 --- [managerback] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (9/13)
+2026-02-15T17:53:11.444Z TRACE 13504 --- [managerback] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (10/13)
+2026-02-15T17:53:11.444Z TRACE 13504 --- [managerback] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (11/13)
+2026-02-15T17:53:11.444Z TRACE 13504 --- [managerback] [http-nio-8082-exec-2] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-02-15T17:53:11.445Z TRACE 13504 --- [managerback] [http-nio-8082-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+2026-02-15T17:53:11.445Z TRACE 13504 --- [managerback] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (12/13)
+2026-02-15T17:53:11.445Z TRACE 13504 --- [managerback] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (13/13)
+2026-02-15T17:53:11.445Z TRACE 13504 --- [managerback] [http-nio-8082-exec-2] estMatcherDelegatingAuthorizationManager : Authorizing SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@25e1f8ef]
+2026-02-15T17:53:11.445Z TRACE 13504 --- [managerback] [http-nio-8082-exec-2] estMatcherDelegatingAuthorizationManager : Checking authorization on SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@25e1f8ef] using org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$$Lambda/0x000001fddf9b2048@502c92ac
+2026-02-15T17:53:11.445Z DEBUG 13504 --- [managerback] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /users
+2026-02-15T17:53:11.497Z TRACE 13504 --- [managerback] [http-nio-8082-exec-2] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
+2026-02-15T17:53:49.287Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain [RequestMatcher=any request, Filters=[org.springframework.security.web.session.DisableEncodeUrlFilter@690506b0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f29bbde, org.springframework.security.web.context.SecurityContextHolderFilter@6a85a13, org.springframework.security.web.header.HeaderWriterFilter@559048b3, org.springframework.web.filter.CorsFilter@47d9bdf4, org.springframework.security.web.authentication.logout.LogoutFilter@7d1647d5, com.football.managerback.infrastructure.security.JwtAuthenticationFilter@14168e1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@511d31a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e99738e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31a266e0, org.springframework.security.web.session.SessionManagementFilter@4731c9af, org.springframework.security.web.access.ExceptionTranslationFilter@5c608988, org.springframework.security.web.access.intercept.AuthorizationFilter@4a5d8ae4]] (1/1)
+2026-02-15T17:53:49.287Z DEBUG 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /users
+2026-02-15T17:53:49.287Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/13)
+2026-02-15T17:53:49.287Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/13)
+2026-02-15T17:53:49.287Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/13)
+2026-02-15T17:53:49.288Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/13)
+2026-02-15T17:53:49.288Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking CorsFilter (5/13)
+2026-02-15T17:53:49.288Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (6/13)
+2026-02-15T17:53:49.288Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Or [Ant [pattern='/logout', GET], Ant [pattern='/logout', POST], Ant [pattern='/logout', PUT], Ant [pattern='/logout', DELETE]]
+2026-02-15T17:53:49.288Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (7/13)
+2026-02-15T17:53:49.288Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (8/13)
+2026-02-15T17:53:49.288Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (9/13)
+2026-02-15T17:53:49.288Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (10/13)
+2026-02-15T17:53:49.288Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (11/13)
+2026-02-15T17:53:49.288Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-02-15T17:53:49.288Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+2026-02-15T17:53:49.288Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (12/13)
+2026-02-15T17:53:49.288Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (13/13)
+2026-02-15T17:53:49.288Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] estMatcherDelegatingAuthorizationManager : Authorizing SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@6f84de64]
+2026-02-15T17:53:49.288Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] estMatcherDelegatingAuthorizationManager : Checking authorization on SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@6f84de64] using org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$$Lambda/0x000001fddf9b2048@502c92ac
+2026-02-15T17:53:49.288Z DEBUG 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /users
+2026-02-15T17:53:49.375Z  WARN 13504 --- [managerback] [http-nio-8082-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
+2026-02-15T17:53:49.375Z ERROR 13504 --- [managerback] [http-nio-8082-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "manager.user" does not exist
+  Position: 32
+2026-02-15T17:53:49.380Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
+2026-02-15T17:53:49.380Z ERROR 13504 --- [managerback] [http-nio-8082-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [select (count(u1_0.id)>0) from manager."user" u1_0 where upper(u1_0.username)=upper(?)] [ERROR: relation "manager.user" does not exist
+  Position: 32] [n/a]; SQL [n/a]] with root cause
+
+org.postgresql.util.PSQLException: ERROR: relation "manager.user" does not exist
+  Position: 32
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134) ~[postgresql-42.6.2.jar:42.6.2]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:246) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:167) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:218) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:98) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:66) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:202) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:209) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$2(ConcreteSqmSelectQueryPlan.java:137) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:362) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:303) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:509) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:427) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResult(AbstractSelectionQuery.java:564) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:223) ~[spring-data-jpa-3.2.4.jar:3.2.4]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92) ~[spring-data-jpa-3.2.4.jar:3.2.4]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:149) ~[spring-data-jpa-3.2.4.jar:3.2.4]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:137) ~[spring-data-jpa-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.5.jar:6.1.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392) ~[spring-tx-6.1.5.jar:6.1.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135) ~[spring-data-jpa-3.2.4.jar:3.2.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:220) ~[spring-aop-6.1.5.jar:6.1.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy154.usernameExists(Unknown Source) ~[na:na]
+	at com.football.managerback.manager.user.user.UserService.validateUsernameAvailability(UserService.java:45) ~[main/:na]
+	at com.football.managerback.manager.user.user.UserService.addUser(UserService.java:34) ~[main/:na]
+	at com.football.managerback.manager.user.user.UserController.addUser(UserController.java:31) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at com.football.managerback.infrastructure.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:47) ~[main/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-02-15T17:53:49.387Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain [RequestMatcher=any request, Filters=[org.springframework.security.web.session.DisableEncodeUrlFilter@690506b0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f29bbde, org.springframework.security.web.context.SecurityContextHolderFilter@6a85a13, org.springframework.security.web.header.HeaderWriterFilter@559048b3, org.springframework.web.filter.CorsFilter@47d9bdf4, org.springframework.security.web.authentication.logout.LogoutFilter@7d1647d5, com.football.managerback.infrastructure.security.JwtAuthenticationFilter@14168e1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@511d31a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e99738e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31a266e0, org.springframework.security.web.session.SessionManagementFilter@4731c9af, org.springframework.security.web.access.ExceptionTranslationFilter@5c608988, org.springframework.security.web.access.intercept.AuthorizationFilter@4a5d8ae4]] (1/1)
+2026-02-15T17:53:49.387Z DEBUG 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /error
+2026-02-15T17:53:49.387Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/13)
+2026-02-15T17:53:49.387Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/13)
+2026-02-15T17:53:49.387Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/13)
+2026-02-15T17:53:49.388Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/13)
+2026-02-15T17:53:49.388Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking CorsFilter (5/13)
+2026-02-15T17:53:49.388Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (6/13)
+2026-02-15T17:53:49.388Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Or [Ant [pattern='/logout', GET], Ant [pattern='/logout', POST], Ant [pattern='/logout', PUT], Ant [pattern='/logout', DELETE]]
+2026-02-15T17:53:49.388Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (7/13)
+2026-02-15T17:53:49.388Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (8/13)
+2026-02-15T17:53:49.388Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (9/13)
+2026-02-15T17:53:49.388Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (10/13)
+2026-02-15T17:53:49.388Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (11/13)
+2026-02-15T17:53:49.388Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (12/13)
+2026-02-15T17:53:49.388Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (13/13)
+2026-02-15T17:53:49.388Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] estMatcherDelegatingAuthorizationManager : Authorizing SecurityContextHolderAwareRequestWrapper[ FirewalledRequest[ org.apache.catalina.core.ApplicationHttpRequest@3f0bac35]]
+2026-02-15T17:53:49.388Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] estMatcherDelegatingAuthorizationManager : Checking authorization on SecurityContextHolderAwareRequestWrapper[ FirewalledRequest[ org.apache.catalina.core.ApplicationHttpRequest@3f0bac35]] using org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$$Lambda/0x000001fddf9b2048@502c92ac
+2026-02-15T17:53:49.388Z DEBUG 13504 --- [managerback] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /error
+2026-02-15T17:53:49.393Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-02-15T17:53:49.393Z TRACE 13504 --- [managerback] [http-nio-8082-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+2026-02-15T17:54:28.632Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain [RequestMatcher=any request, Filters=[org.springframework.security.web.session.DisableEncodeUrlFilter@690506b0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f29bbde, org.springframework.security.web.context.SecurityContextHolderFilter@6a85a13, org.springframework.security.web.header.HeaderWriterFilter@559048b3, org.springframework.web.filter.CorsFilter@47d9bdf4, org.springframework.security.web.authentication.logout.LogoutFilter@7d1647d5, com.football.managerback.infrastructure.security.JwtAuthenticationFilter@14168e1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@511d31a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e99738e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31a266e0, org.springframework.security.web.session.SessionManagementFilter@4731c9af, org.springframework.security.web.access.ExceptionTranslationFilter@5c608988, org.springframework.security.web.access.intercept.AuthorizationFilter@4a5d8ae4]] (1/1)
+2026-02-15T17:54:28.633Z DEBUG 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /roles
+2026-02-15T17:54:28.633Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/13)
+2026-02-15T17:54:28.633Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/13)
+2026-02-15T17:54:28.633Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/13)
+2026-02-15T17:54:28.633Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/13)
+2026-02-15T17:54:28.633Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking CorsFilter (5/13)
+2026-02-15T17:54:28.633Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (6/13)
+2026-02-15T17:54:28.633Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Or [Ant [pattern='/logout', GET], Ant [pattern='/logout', POST], Ant [pattern='/logout', PUT], Ant [pattern='/logout', DELETE]]
+2026-02-15T17:54:28.633Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (7/13)
+2026-02-15T17:54:28.633Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (8/13)
+2026-02-15T17:54:28.633Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (9/13)
+2026-02-15T17:54:28.633Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (10/13)
+2026-02-15T17:54:28.633Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (11/13)
+2026-02-15T17:54:28.633Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-02-15T17:54:28.634Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+2026-02-15T17:54:28.634Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (12/13)
+2026-02-15T17:54:28.634Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (13/13)
+2026-02-15T17:54:28.634Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] estMatcherDelegatingAuthorizationManager : Authorizing SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@1f265f20]
+2026-02-15T17:54:28.634Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] estMatcherDelegatingAuthorizationManager : Checking authorization on SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@1f265f20] using org.springframework.security.authorization.AuthenticatedAuthorizationManager@11e1b2b4
+2026-02-15T17:54:28.634Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.s.w.a.ExceptionTranslationFilter     : Sending AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]] to authentication entry point since access is denied
+
+org.springframework.security.access.AccessDeniedException: Access Denied
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:98) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at com.football.managerback.infrastructure.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:47) ~[main/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-02-15T17:54:28.635Z DEBUG 13504 --- [managerback] [http-nio-8082-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-02-15T17:54:28.635Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
+2026-02-15T17:54:28.637Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain [RequestMatcher=any request, Filters=[org.springframework.security.web.session.DisableEncodeUrlFilter@690506b0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f29bbde, org.springframework.security.web.context.SecurityContextHolderFilter@6a85a13, org.springframework.security.web.header.HeaderWriterFilter@559048b3, org.springframework.web.filter.CorsFilter@47d9bdf4, org.springframework.security.web.authentication.logout.LogoutFilter@7d1647d5, com.football.managerback.infrastructure.security.JwtAuthenticationFilter@14168e1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@511d31a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e99738e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31a266e0, org.springframework.security.web.session.SessionManagementFilter@4731c9af, org.springframework.security.web.access.ExceptionTranslationFilter@5c608988, org.springframework.security.web.access.intercept.AuthorizationFilter@4a5d8ae4]] (1/1)
+2026-02-15T17:54:28.637Z DEBUG 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2026-02-15T17:54:28.637Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/13)
+2026-02-15T17:54:28.637Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/13)
+2026-02-15T17:54:28.637Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/13)
+2026-02-15T17:54:28.637Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/13)
+2026-02-15T17:54:28.637Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking CorsFilter (5/13)
+2026-02-15T17:54:28.637Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (6/13)
+2026-02-15T17:54:28.638Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Or [Ant [pattern='/logout', GET], Ant [pattern='/logout', POST], Ant [pattern='/logout', PUT], Ant [pattern='/logout', DELETE]]
+2026-02-15T17:54:28.638Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (7/13)
+2026-02-15T17:54:28.638Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (8/13)
+2026-02-15T17:54:28.638Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (9/13)
+2026-02-15T17:54:28.638Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (10/13)
+2026-02-15T17:54:28.638Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (11/13)
+2026-02-15T17:54:28.638Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (12/13)
+2026-02-15T17:54:28.638Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (13/13)
+2026-02-15T17:54:28.638Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] estMatcherDelegatingAuthorizationManager : Authorizing SecurityContextHolderAwareRequestWrapper[ FirewalledRequest[ org.apache.catalina.core.ApplicationHttpRequest@3c46025f]]
+2026-02-15T17:54:28.638Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] estMatcherDelegatingAuthorizationManager : Checking authorization on SecurityContextHolderAwareRequestWrapper[ FirewalledRequest[ org.apache.catalina.core.ApplicationHttpRequest@3c46025f]] using org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$$Lambda/0x000001fddf9b2048@502c92ac
+2026-02-15T17:54:28.638Z DEBUG 13504 --- [managerback] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /error
+2026-02-15T17:54:28.639Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-02-15T17:54:28.639Z TRACE 13504 --- [managerback] [http-nio-8082-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+2026-02-15T17:57:08.010Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain [RequestMatcher=any request, Filters=[org.springframework.security.web.session.DisableEncodeUrlFilter@690506b0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f29bbde, org.springframework.security.web.context.SecurityContextHolderFilter@6a85a13, org.springframework.security.web.header.HeaderWriterFilter@559048b3, org.springframework.web.filter.CorsFilter@47d9bdf4, org.springframework.security.web.authentication.logout.LogoutFilter@7d1647d5, com.football.managerback.infrastructure.security.JwtAuthenticationFilter@14168e1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@511d31a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e99738e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31a266e0, org.springframework.security.web.session.SessionManagementFilter@4731c9af, org.springframework.security.web.access.ExceptionTranslationFilter@5c608988, org.springframework.security.web.access.intercept.AuthorizationFilter@4a5d8ae4]] (1/1)
+2026-02-15T17:57:08.010Z DEBUG 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /login
+2026-02-15T17:57:08.010Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/13)
+2026-02-15T17:57:08.010Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/13)
+2026-02-15T17:57:08.010Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/13)
+2026-02-15T17:57:08.010Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/13)
+2026-02-15T17:57:08.010Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking CorsFilter (5/13)
+2026-02-15T17:57:08.010Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (6/13)
+2026-02-15T17:57:08.010Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Or [Ant [pattern='/logout', GET], Ant [pattern='/logout', POST], Ant [pattern='/logout', PUT], Ant [pattern='/logout', DELETE]]
+2026-02-15T17:57:08.010Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (7/13)
+2026-02-15T17:57:08.010Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (8/13)
+2026-02-15T17:57:08.011Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (9/13)
+2026-02-15T17:57:08.011Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (10/13)
+2026-02-15T17:57:08.011Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (11/13)
+2026-02-15T17:57:08.011Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-02-15T17:57:08.011Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+2026-02-15T17:57:08.011Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (12/13)
+2026-02-15T17:57:08.011Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (13/13)
+2026-02-15T17:57:08.011Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] estMatcherDelegatingAuthorizationManager : Authorizing SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@44ebb5c2]
+2026-02-15T17:57:08.011Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] estMatcherDelegatingAuthorizationManager : Checking authorization on SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@44ebb5c2] using org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$$Lambda/0x000001fddf9b2048@502c92ac
+2026-02-15T17:57:08.011Z DEBUG 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /login
+2026-02-15T17:57:08.043Z  WARN 13504 --- [managerback] [http-nio-8082-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
+2026-02-15T17:57:08.044Z ERROR 13504 --- [managerback] [http-nio-8082-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "manager.user" does not exist
+  Position: 85
+2026-02-15T17:57:08.044Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
+2026-02-15T17:57:08.044Z ERROR 13504 --- [managerback] [http-nio-8082-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [select u1_0.id,u1_0.email,u1_0.password,u1_0.role_id,u1_0.status,u1_0.username from manager."user" u1_0 where u1_0.username=? and u1_0.status=?] [ERROR: relation "manager.user" does not exist
+  Position: 85] [n/a]; SQL [n/a]] with root cause
+
+org.postgresql.util.PSQLException: ERROR: relation "manager.user" does not exist
+  Position: 85
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134) ~[postgresql-42.6.2.jar:42.6.2]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:246) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:167) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:218) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:98) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:66) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:202) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:209) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$2(ConcreteSqmSelectQueryPlan.java:137) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:362) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:303) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:509) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:427) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResult(AbstractSelectionQuery.java:564) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:223) ~[spring-data-jpa-3.2.4.jar:3.2.4]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92) ~[spring-data-jpa-3.2.4.jar:3.2.4]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:149) ~[spring-data-jpa-3.2.4.jar:3.2.4]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:137) ~[spring-data-jpa-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70) ~[spring-data-commons-3.2.4.jar:3.2.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.5.jar:6.1.5]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392) ~[spring-tx-6.1.5.jar:6.1.5]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135) ~[spring-data-jpa-3.2.4.jar:3.2.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:220) ~[spring-aop-6.1.5.jar:6.1.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy154.findUserByUsername(Unknown Source) ~[na:na]
+	at com.football.managerback.manager.user.login.LoginService.login(LoginService.java:28) ~[main/:na]
+	at com.football.managerback.manager.user.login.LoginController.login(LoginController.java:32) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at com.football.managerback.infrastructure.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:47) ~[main/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-02-15T17:57:08.050Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain [RequestMatcher=any request, Filters=[org.springframework.security.web.session.DisableEncodeUrlFilter@690506b0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f29bbde, org.springframework.security.web.context.SecurityContextHolderFilter@6a85a13, org.springframework.security.web.header.HeaderWriterFilter@559048b3, org.springframework.web.filter.CorsFilter@47d9bdf4, org.springframework.security.web.authentication.logout.LogoutFilter@7d1647d5, com.football.managerback.infrastructure.security.JwtAuthenticationFilter@14168e1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@511d31a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e99738e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31a266e0, org.springframework.security.web.session.SessionManagementFilter@4731c9af, org.springframework.security.web.access.ExceptionTranslationFilter@5c608988, org.springframework.security.web.access.intercept.AuthorizationFilter@4a5d8ae4]] (1/1)
+2026-02-15T17:57:08.050Z DEBUG 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /error
+2026-02-15T17:57:08.050Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/13)
+2026-02-15T17:57:08.050Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/13)
+2026-02-15T17:57:08.050Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/13)
+2026-02-15T17:57:08.050Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/13)
+2026-02-15T17:57:08.050Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking CorsFilter (5/13)
+2026-02-15T17:57:08.051Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (6/13)
+2026-02-15T17:57:08.051Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Or [Ant [pattern='/logout', GET], Ant [pattern='/logout', POST], Ant [pattern='/logout', PUT], Ant [pattern='/logout', DELETE]]
+2026-02-15T17:57:08.051Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (7/13)
+2026-02-15T17:57:08.051Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (8/13)
+2026-02-15T17:57:08.051Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (9/13)
+2026-02-15T17:57:08.051Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (10/13)
+2026-02-15T17:57:08.051Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (11/13)
+2026-02-15T17:57:08.051Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (12/13)
+2026-02-15T17:57:08.051Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (13/13)
+2026-02-15T17:57:08.051Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] estMatcherDelegatingAuthorizationManager : Authorizing SecurityContextHolderAwareRequestWrapper[ FirewalledRequest[ org.apache.catalina.core.ApplicationHttpRequest@3bc723a8]]
+2026-02-15T17:57:08.051Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] estMatcherDelegatingAuthorizationManager : Checking authorization on SecurityContextHolderAwareRequestWrapper[ FirewalledRequest[ org.apache.catalina.core.ApplicationHttpRequest@3bc723a8]] using org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$$Lambda/0x000001fddf9b2048@502c92ac
+2026-02-15T17:57:08.051Z DEBUG 13504 --- [managerback] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /error
+2026-02-15T17:57:08.053Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-02-15T17:57:08.053Z TRACE 13504 --- [managerback] [http-nio-8082-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+2026-02-15T17:57:37.740Z TRACE 13504 --- [managerback] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain [RequestMatcher=any request, Filters=[org.springframework.security.web.session.DisableEncodeUrlFilter@690506b0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f29bbde, org.springframework.security.web.context.SecurityContextHolderFilter@6a85a13, org.springframework.security.web.header.HeaderWriterFilter@559048b3, org.springframework.web.filter.CorsFilter@47d9bdf4, org.springframework.security.web.authentication.logout.LogoutFilter@7d1647d5, com.football.managerback.infrastructure.security.JwtAuthenticationFilter@14168e1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@511d31a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e99738e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31a266e0, org.springframework.security.web.session.SessionManagementFilter@4731c9af, org.springframework.security.web.access.ExceptionTranslationFilter@5c608988, org.springframework.security.web.access.intercept.AuthorizationFilter@4a5d8ae4]] (1/1)
+2026-02-15T17:57:37.740Z DEBUG 13504 --- [managerback] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs
+2026-02-15T17:57:37.740Z TRACE 13504 --- [managerback] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/13)
+2026-02-15T17:57:37.740Z TRACE 13504 --- [managerback] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/13)
+2026-02-15T17:57:37.740Z TRACE 13504 --- [managerback] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/13)
+2026-02-15T17:57:37.740Z TRACE 13504 --- [managerback] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/13)
+2026-02-15T17:57:37.740Z TRACE 13504 --- [managerback] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Invoking CorsFilter (5/13)
+2026-02-15T17:57:37.740Z TRACE 13504 --- [managerback] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Invoking LogoutFilter (6/13)
+2026-02-15T17:57:37.740Z TRACE 13504 --- [managerback] [http-nio-8082-exec-6] o.s.s.w.a.logout.LogoutFilter            : Did not match request to Or [Ant [pattern='/logout', GET], Ant [pattern='/logout', POST], Ant [pattern='/logout', PUT], Ant [pattern='/logout', DELETE]]
+2026-02-15T17:57:37.740Z TRACE 13504 --- [managerback] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (7/13)
+2026-02-15T17:57:37.741Z TRACE 13504 --- [managerback] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Invoking RequestCacheAwareFilter (8/13)
+2026-02-15T17:57:37.741Z TRACE 13504 --- [managerback] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (9/13)
+2026-02-15T17:57:37.741Z TRACE 13504 --- [managerback] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Invoking AnonymousAuthenticationFilter (10/13)
+2026-02-15T17:57:37.741Z TRACE 13504 --- [managerback] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (11/13)
+2026-02-15T17:57:37.741Z TRACE 13504 --- [managerback] [http-nio-8082-exec-6] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2026-02-15T17:57:37.741Z TRACE 13504 --- [managerback] [http-nio-8082-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]
+2026-02-15T17:57:37.741Z TRACE 13504 --- [managerback] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (12/13)
+2026-02-15T17:57:37.741Z TRACE 13504 --- [managerback] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (13/13)
+2026-02-15T17:57:37.741Z TRACE 13504 --- [managerback] [http-nio-8082-exec-6] estMatcherDelegatingAuthorizationManager : Authorizing SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@150c76c2]
+2026-02-15T17:57:37.741Z TRACE 13504 --- [managerback] [http-nio-8082-exec-6] estMatcherDelegatingAuthorizationManager : Checking authorization on SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@150c76c2] using org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer$$Lambda/0x000001fddf9b2048@502c92ac
+2026-02-15T17:57:37.741Z DEBUG 13504 --- [managerback] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs
+2026-02-15T17:57:38.112Z  INFO 13504 --- [managerback] [http-nio-8082-exec-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 364 ms
+2026-02-15T17:57:38.145Z TRACE 13504 --- [managerback] [http-nio-8082-exec-6] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
