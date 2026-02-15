@@ -42,3 +42,5 @@ out/
 
 ### Token ###
 src/main/resources/jwt.properties
+/.claude/
+/gradle/
